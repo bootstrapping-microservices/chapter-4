@@ -1,0 +1,5 @@
+.vagrant/
+ubuntu-xenial-16.04-cloudimg-console.log
+example-2/azure-storage/node_modules/
+example-3/azure-storage/node_modules/
+example-3/video-streaming/node_modules/
