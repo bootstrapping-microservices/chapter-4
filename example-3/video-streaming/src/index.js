@@ -69,7 +69,7 @@ function main() {
             });
             
             app.listen(port, () => {
-                console.log(`Microservice listening, please load the data file db-fixture/videos.json into your database, then point your browser at http://localhost:4002/video?id=5d9e690ad76fe06a3d7ae416`);
+                console.log(`Microservice listening, please load the data file db-fixture/videos.json into your database before testing this microservice.`);
             });
         });
 }

@@ -35,5 +35,5 @@ app.get("/video", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Microservice online, point your browser at http://localhost:4002/video`);
+    console.log(`Microservice online`);
 });

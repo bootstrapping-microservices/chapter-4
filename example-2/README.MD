@@ -10,4 +10,4 @@ Boot it up from the terminal using:
 
     docker-compose up --build
 
-Then point your browser at http://localhost:3000/video
+Then point your browser at http://localhost:4002/video.

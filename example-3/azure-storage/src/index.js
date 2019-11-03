@@ -60,5 +60,5 @@ app.get("/video", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Microservice online, point your browser at http://localhost:4001/video?path=SampleVideo_1280x720_1mb.mp4`);
+    console.log(`Microservice online`);
 });
