@@ -5,24 +5,24 @@ const app = express();
 const port = 3000;
 
 
-if (!process.env.IMAGE_STORAGE_ACCOUNT_NAME) {
-    throw new Error("Please specify the name of an Azure storage account in environment variable IMAGE_STORAGE_ACCOUNT_NAME.");
+if (!process.env.STORAGE_ACCOUNT_NAME) {
+    throw new Error("Please specify the name of an Azure storage account in environment variable STORAGE_ACCOUNT_NAME.");
 }
 
-const IMAGE_STORAGE_ACCOUNT_NAME = process.env.IMAGE_STORAGE_ACCOUNT_NAME;
-console.log(`Serving videos from Azure storage account ${IMAGE_STORAGE_ACCOUNT_NAME}.`);
+const STORAGE_ACCOUNT_NAME = process.env.STORAGE_ACCOUNT_NAME;
+console.log(`Serving videos from Azure storage account ${STORAGE_ACCOUNT_NAME}.`);
 
-if (!process.env.IMAGE_STORAGE_ACCESS_KEY) {
-    throw new Error("Please specify the access key to an Azure storage account in environment variable IMAGE_STORAGE_ACCESS_KEY.");
+if (!process.env.STORAGE_ACCESS_KEY) {
+    throw new Error("Please specify the access key to an Azure storage account in environment variable STORAGE_ACCESS_KEY.");
 }
 
-const IMAGE_STORAGE_ACCESS_KEY = process.env.IMAGE_STORAGE_ACCESS_KEY;
+const STORAGE_ACCESS_KEY = process.env.STORAGE_ACCESS_KEY;
 
 //
 // Create the Blob service API to communicate with Azure storage.
 //
 function createBlobService() {
-	const blobService = azure.createBlobService(IMAGE_STORAGE_ACCOUNT_NAME, IMAGE_STORAGE_ACCESS_KEY);
+	const blobService = azure.createBlobService(STORAGE_ACCOUNT_NAME, STORAGE_ACCESS_KEY);
     //blobService.logger.level = azure.Logger.LogLevels.DEBUG; Uncomment this line for extra debug logging.
     return blobService;
 }

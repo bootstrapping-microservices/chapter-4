@@ -19,8 +19,8 @@ services:
     ports:
      - "4001:3000"
     environment:
-      - IMAGE_STORAGE_ACCOUNT_NAME=bootstrapmicroservices
-      - IMAGE_STORAGE_ACCESS_KEY=pTBcML6ggJ7EKaIS7VNX+6AeKwrzXXf6l3SXtSkj44jdWHWFpjkncUAYOCrjy1riMzkJYTrbeT9wKXPf5gNyEw==
+      - STORAGE_ACCOUNT_NAME=bootstrapmicroservices
+      - STORAGE_ACCESS_KEY=pTBcML6ggJ7EKaIS7VNX+6AeKwrzXXf6l3SXtSkj44jdWHWFpjkncUAYOCrjy1riMzkJYTrbeT9wKXPf5gNyEw==
     restart: always
 
   video-streaming:
