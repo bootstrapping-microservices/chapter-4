@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     container_name: video-streaming
     ports:
-     - "3000:3000"
+     - "4001:80"
     environment:
-      - VIDEOS=./videos
-    restart: always
+      - PORT=80
+    restart: "no"

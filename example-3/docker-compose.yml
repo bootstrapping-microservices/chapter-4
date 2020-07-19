@@ -17,11 +17,12 @@ services:
       dockerfile: Dockerfile
     container_name: video-storage
     ports:
-     - "4001:3000"
+     - "4001:80"
     environment:
+      - PORT=80
       - STORAGE_ACCOUNT_NAME=bootstrapmicroservices
       - STORAGE_ACCESS_KEY=pTBcML6ggJ7EKaIS7VNX+6AeKwrzXXf6l3SXtSkj44jdWHWFpjkncUAYOCrjy1riMzkJYTrbeT9wKXPf5gNyEw==
-    restart: always
+    restart: "no"
 
   video-streaming:
     image: video-streaming
@@ -30,10 +31,11 @@ services:
       dockerfile: Dockerfile
     container_name: video-streaming
     ports:
-     - "4002:3000"
+     - "4002:80"
     environment:
+      - PORT=80
       - DBHOST=mongodb://db:27017
       - DBNAME=video-streaming
       - VIDEO_STORAGE_HOST=video-storage
-      - VIDEO_STORAGE_PORT=3000
-    restart: always
+      - VIDEO_STORAGE_PORT=4001
+    restart: "no"

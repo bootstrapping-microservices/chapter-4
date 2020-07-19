@@ -3,18 +3,25 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const port = 3000;
 
-if (!process.env.VIDEOS_PATH) {
-    throw new Error("Please specify the path to videos using the environment variable VIDEOS_PATH.");
+//
+// Throws an error if the PORT environment variable is missing.
+//
+if (!process.env.PORT) {
+    throw new Error("Please specify the port number for the HTTP server with the environment variable PORT.");
 }
 
-const VIDEOS_PATH = process.env.VIDEOS_PATH;
-console.log(`Serving videos from path ${VIDEOS_PATH}.`);
+//
+// Extracts the PORT environment variable.
+//
+const PORT = process.env.PORT;
 
+//
+// Registers a HTTP GET route for video streaming.
+//
 app.get("/video", (req, res) => {
 
-    const videoPath = path.join(VIDEOS_PATH, "SampleVideo_1280x720_1mb.mp4");
+    const videoPath = path.join("./videos", "SampleVideo_1280x720_1mb.mp4");
     fs.stat(videoPath, (err, stats) => {
         if (err) {
             console.error("An error occurred ");
@@ -30,6 +37,9 @@ app.get("/video", (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Microservice listening on port ${port}, point your browser at http://localhost:3000/video`);
+//
+// Starts the HTTP server.
+//
+app.listen(PORT, () => {
+    console.log(`Microservice online.`);
 });
