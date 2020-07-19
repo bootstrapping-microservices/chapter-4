@@ -21,14 +21,14 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-get -yq update
-sudo apt-get -yq install docker-ce=5:19.03.2~3-0~ubuntu-xenial
+sudo apt-get -yq install docker-ce=5:19.03.13~3-0~ubuntu-xenial
 docker --version
 
 #
 # Install Docker-Compose.
 # https://docs.docker.com/compose/install/
 #
-sudo curl --silent -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl --silent -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 #
