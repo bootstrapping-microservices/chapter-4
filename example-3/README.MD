@@ -12,4 +12,4 @@ Boot it up from the terminal using:
 
 You must now load the database fixture ./db-fixture/videos.json into your database. You can do this using Robo 3T or mongoimport.
 
-Then point your browser at http://localhost:4002/video?id=5d9e690ad76fe06a3d7ae416
+Then point your browser at http://localhost:4001/video?id=5d9e690ad76fe06a3d7ae416
