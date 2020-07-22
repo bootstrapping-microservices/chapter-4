@@ -11,8 +11,8 @@ services:
      - "4000:80"
     environment:
       - PORT=80
-      - STORAGE_ACCOUNT_NAME=bootstrapmicroservice
-      - STORAGE_ACCESS_KEY=EAjM1FvpfEG1kR8H+zkKJO/T1TjS++GYysJICJVS0f1UncMttRj0h8peq/5ciJWI+PwjkUyHL+cEv6ahtnsWWA==
+      - STORAGE_ACCOUNT_NAME=<insert your Azure storage account name here>
+      - STORAGE_ACCESS_KEY=<insert your Azure storage account access key here>
     restart: "no"
 
   video-streaming:
