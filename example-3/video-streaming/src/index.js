@@ -30,9 +30,9 @@ if (!process.env.DBNAME) {
 // Extracts environment variables to globals for convenience.
 //
 
+const PORT = process.env.PORT;
 const VIDEO_STORAGE_HOST = process.env.VIDEO_STORAGE_HOST;
 const VIDEO_STORAGE_PORT = parseInt(process.env.VIDEO_STORAGE_PORT);
-const PORT = process.env.PORT;
 const DBHOST = process.env.DBHOST;
 const DBNAME = process.env.DBNAME;
 
