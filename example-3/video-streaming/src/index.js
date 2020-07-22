@@ -2,6 +2,8 @@ const express = require("express");
 const http = require("http");
 const mongodb = require("mongodb");
 
+const app = express();
+
 //
 // Throws an error if the any required environment variables are missing.
 //
