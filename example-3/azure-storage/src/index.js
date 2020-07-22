@@ -69,7 +69,7 @@ app.get("/video", (req, res) => {
         //
         // Streams the video from Azure storage to the response.
         //
-        blobService.getBlobToStream(containerName, videoPath, res, err => { /
+        blobService.getBlobToStream(containerName, videoPath, res, err => {
             if (err) {
                 console.error(`Error occurred getting video ${containerName}/${videoPath} to stream.`);
                 console.error(err && err.stack || err);
