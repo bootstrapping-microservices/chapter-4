@@ -6,8 +6,6 @@ services:
     container_name: db
     ports:
      - "4000:27017"
-    expose:
-      - "27017"
     restart: always
 
   azure-storage:
