@@ -8,5 +8,5 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 4001, host: 4001
   config.vm.network "forwarded_port", guest: 4002, host: 4002
 
-  config.vm.provision "shell", path: "provision.sh"
+  config.vm.provision "shell", path: "./scripts/provision-dev-vm.sh"
 end
