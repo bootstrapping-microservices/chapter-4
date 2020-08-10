@@ -31,7 +31,7 @@ console.log(`Forwarding video requests to ${VIDEO_STORAGE_HOST}:${VIDEO_STORAGE_
 // Registers a HTTP GET route for video streaming.
 //
 app.get("/video", (req, res) => {
-    const forwardRequest = http.request( // Forward the request to the video streaming microservice.
+    const forwardRequest = http.request( // Forward the request to the video storage microservice.
         {
             host: VIDEO_STORAGE_HOST,
             port: VIDEO_STORAGE_PORT,
