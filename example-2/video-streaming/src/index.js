@@ -35,7 +35,7 @@ app.get("/video", (req, res) => {
         {
             host: VIDEO_STORAGE_HOST,
             port: VIDEO_STORAGE_PORT,
-            path:'/video?path=SampleVideo_1280x720_1mb.mp4', // Video path is hard-coded for the moment.
+            path: '/video?path=SampleVideo_1280x720_1mb.mp4', // Video path is hard-coded for the moment.
             method: 'GET',
             headers: req.headers
         }, 
