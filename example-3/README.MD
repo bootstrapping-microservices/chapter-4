@@ -1,6 +1,6 @@
 # Example-3
 
-Example number 3 from Chapter 4 of [Bootstrapping Microservices](http://bit.ly/2o0aDsP).
+Example number 3 from Chapter 4 of [Bootstrapping Microservices](https://www.bootstrapping-microservices.com).
 
 In Chapter 4 of Bootstrapping Microservices you learn to develop and test a microservices application using Docker-Compose.
 
